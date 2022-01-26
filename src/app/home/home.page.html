@@ -1,27 +1,26 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Accueil
+      Authentification
     </ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
-  <ion-item>
-    <ion-label placeholder="entrez votre Nom" position="floating">Nom:</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label placeholder="entrez votre Prenom" position="floating">Prenom:</ion-label>
-    <ion-input type="text"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label placeholder="entrez votre Email" position="floating">Email:</ion-label>
-    <ion-input type="email"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label placeholder="entrez votre Mot de passe" position="floating">Mot de passe:</ion-label>
-    <ion-input type="password"></ion-input>
-  </ion-item><br>
-  <ion-button ion-text-center routerLink="/addstudent">Ajouter</ion-button>
-</ion-content>
+<ion-content >
+  <div class="padding">
+ <div class="logo">
+   <ion-icon  name="person-circle-outline"></ion-icon>
+ </div>
+   <ion-item>
+     <ion-label color="light">Email:</ion-label>
+     <ion-input color="light"  type="email" placeholder="Adresse email"></ion-input>
+   </ion-item>
+   <ion-item>
+     <ion-label color="light">Mot de passe:</ion-label>
+     <ion-input color="light"  type="password" placeholder="Mot de passe"></ion-input>
+   </ion-item>
+     <ion-item lines="none">
+     <ion-button color="light" fill="clear" slot="end">Mot de passe oublié?</ion-button>
+   </ion-item>
+   <ion-button color="success" fill="ouline" shape="round" expand="block" routerLink="/accueil">Connexion</ion-button><br>
+   <ion-button color="success" shape="round"  expand="block" routerLink="/addstudent">Inscription</ion-button>
+   

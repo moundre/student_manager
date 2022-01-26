@@ -16,7 +16,7 @@ const routes: Routes = [
     loadChildren: () => import('./addstudent/addstudent.module').then( m => m.AddstudentPageModule)
   },
   {
-    path: 'updatestudent',
+    path: 'updatestudent/:id',
     loadChildren: () => import('./updatestudent/updatestudent.module').then( m => m.UpdatestudentPageModule)
   },
   {
@@ -27,6 +27,11 @@ const routes: Routes = [
     path: 'deletestudent',
     loadChildren: () => import('./deletestudent/deletestudent.module').then( m => m.DeletestudentPageModule)
   },
+  {
+    path: 'accueil',
+    loadChildren: () => import('./accueil/accueil.module').then( m => m.AccueilPageModule)
+  },
+  
 ];
 
 @NgModule({

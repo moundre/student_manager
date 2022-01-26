@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ApiserviceService } from '../apiservice.service';
 
 @Component({
   selector: 'app-addstudent',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddstudentPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private apser:ApiserviceService,
+    private route:Router
+    ) { }
 
   ngOnInit() {
   }
-
+  register(moundre){
+  this.apser.addstudent(moundre.value).subscribe(data=>{
+    console.log( 'Nouveau Apprenant',data);
+    this.route.navigateByUrl('/accueil');
+  })
+  
+  
+}
 }

@@ -1,9 +1,38 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
     <ion-title>listestudent</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+<ion-item *ngFor="let stu of student">
+  <label for="">
+    <h2>{{stu.prenom_student}} {{stu.nom_student}}</h2>
+    <h5>{{stu.email_student}}</h5>
+  </label>
+  <ion-icon name="create-outline" slot="end" color="primary" (click)="received(stu)"></ion-icon>
+  <ion-icon name="trash" slot="end" (click)="deletestu(stu.id_student)"></ion-icon>
+</ion-item>
+
+<!-- <table>
+  <thead>
+    <th>Prénom</th>
+    <th>Nom</th>
+    <th>Email</th>
+    <th>Password</th>
+    <th>Actions</th>
+  </thead>
+  <tbody>
+    <td>{{stu.prenom_student}}</td>
+    <td>{{stu.nom_student}}</td>
+    <td>{{stu.email_student}}</td>
+    <td>{{stu.password_student}}</td>
+    <ion-button color="blue">modifier</ion-button>
+    
+  </tbody>
+</table> -->
 
 </ion-content>
